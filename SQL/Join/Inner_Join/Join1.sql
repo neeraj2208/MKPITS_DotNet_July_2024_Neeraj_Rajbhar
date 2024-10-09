@@ -1,0 +1,1 @@
+Select C.FirstName, C.LastName, O.TotalAmount from Customer C join Orders O on C.Id=O.CustomerId where O.OrdersDate between '2012-07-04 00:00:00.000' and '2012-07-05 00:00:00.000' -- to check orders date 
