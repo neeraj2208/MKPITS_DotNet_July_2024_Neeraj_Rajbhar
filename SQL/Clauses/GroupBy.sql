@@ -1,0 +1,1 @@
+SElect MAX(Orders.CustomerId) as OrdersId CustomerId as CustomerId from Orders group by Orders.OrdersNumber
