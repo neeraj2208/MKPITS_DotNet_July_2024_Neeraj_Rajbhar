@@ -1,0 +1,1 @@
+update EmployeeDetail set Salary=Salary*1.10;
