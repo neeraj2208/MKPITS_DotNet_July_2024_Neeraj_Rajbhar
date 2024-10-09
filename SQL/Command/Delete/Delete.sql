@@ -1,0 +1,1 @@
+delete  from  EmployeeDetail  where deptID=11
