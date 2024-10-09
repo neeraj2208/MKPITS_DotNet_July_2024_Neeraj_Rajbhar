@@ -1,0 +1,1 @@
+update EmployeeDetail set salary=5000 where EmpId=8;
