@@ -1,0 +1,1 @@
+SElect * from Orders where CustomerId>34;    --- where clause for customerId having graeter than 34
