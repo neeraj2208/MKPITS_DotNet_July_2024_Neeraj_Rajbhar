@@ -1,0 +1,1 @@
+Select * From EmployeeDetail;
