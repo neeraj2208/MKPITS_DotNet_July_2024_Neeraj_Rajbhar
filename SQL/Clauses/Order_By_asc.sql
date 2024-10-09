@@ -1,0 +1,1 @@
+Select * from Orders order by CustomerId   ---CustomerId in ascending
