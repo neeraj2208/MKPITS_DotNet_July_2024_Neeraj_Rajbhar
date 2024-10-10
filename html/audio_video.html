@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio and Video Upload</title>
+</head>
+<body>
+    <h2>Upload Audio and Video Files in Database</h2>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        
+        <label for="audioUpload">Upload an audio file:</label><br>
+        <input type="file" id="audioUpload" name="audioFile" accept="audio/*"><br><br>
+       
+        <label for="videoUpload">Upload a video file:</label><br>
+        <input type="file" id="videoUpload" name="videoFile" accept="video/*"><br><br>
+
+        <input type="submit" value="Upload">
+    </form>
+
+</body>
+</html>
