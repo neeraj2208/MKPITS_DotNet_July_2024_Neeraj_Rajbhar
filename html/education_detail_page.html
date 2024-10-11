@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Education Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .button-container {
+            text-align: center;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Enter Education Details</h1>
+        <form action="/submit-education" method="POST">
+            <label for="degree">Degree Name:</label>
+            <input type="text" id="degree" name="degree" placeholder="e.g. Bachelor of Science in Computer Science" required>
+
+            <label for="institution">Institution Name:</label>
+            <input type="text" id="institution" name="institution" placeholder="e.g. XYZ University" required>
+
+            <label for="startYear">Start Year:</label>
+            <input type="number" id="startYear" name="startYear" placeholder="e.g. 2016" min="1900" max="2099" required>
+
+            <label for="endYear">End Year:</label>
+            <input type="number" id="endYear" name="endYear" placeholder="e.g. 2020" min="1900" max="2099" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" placeholder="Enter details about your degree or courses..." required></textarea>
+
+            <div class="button-container">
+                <input type="submit" value="Submit Education Details">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
