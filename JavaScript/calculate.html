@@ -1,0 +1,64 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="add_sub.aspx.cs" Inherits="Amazon_web.add_sub" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Calculator</title>
+    <script type="text/javascript">
+   
+        function calculate(operation){
+
+            var num1 = parseFloat(document.getElementById("TextBox1").value);
+            var num2 = parseFloat(document.getElementById("TextBox2").value);
+            var result = 0;
+
+            switch (operation){
+                case 'add':
+                    result = num1 + num2;
+                    break;
+                case 'sub':
+                    result = num1 - num2;
+                    break;
+                case 'mul':
+                    result = num1 * num2;
+                    break;
+                case 'div':
+                    result = num1 / num2;
+                    break;
+                default:
+                    result = "invalid operation";
+            }
+        
+            // Display result in Label
+            document.getElementById("LabelResult").innerHTML = "Result: " + result;
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:Label ID="Label1" runat="server" Text="Enter num 1:"></asp:Label>
+            <asp:TextBox ID="TextBox1" runat="server" placeholder="Enter num 1"></asp:TextBox>
+
+            <div>
+                <asp:Label ID="Label3" runat="server" Text="Enter num 2:"></asp:Label>
+                <asp:TextBox ID="TextBox2" runat="server" placeholder="Enter num 2"></asp:TextBox>
+            </div>
+
+            <div>
+
+                <asp:button id="button1" runat="server" text="addition" OnClientClick="calculate('add'); return false;" />
+                <asp:button id="button2" runat="server" text="subtraction" onclientclick="calculate('sub'); return false;" />
+                <asp:button id="button3" runat="server" text="multiplication" onclientclick="calculate('mul'); return false;" />
+                <asp:button id="button4" runat="server" text="division" onclientclick="calculate('div'); return false;" /> 
+                
+            </div>
+
+            <div>
+                <asp:Label ID="LabelResult" runat="server" Text="Result: "></asp:Label>
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>
