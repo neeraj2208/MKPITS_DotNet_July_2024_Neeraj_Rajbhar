@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button onclick="displayText()">Submit</button>
+        <p id="display"></p>
+
+        <script>
+            function displayText() {
+                var name = document.getElementById("nameInput").value;
+                document.getElementById("display").innerHTML = "Hello, " + name;
+            }
+        </script>
+    </body>
+</html>
