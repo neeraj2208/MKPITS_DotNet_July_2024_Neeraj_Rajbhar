@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="product.aspx.cs" Inherits="Amazon_web.product" %>
+<%@ page language="C#" autoeventwireup="true" codebehind="product.aspx.cs" inherits="Amazon_web.product" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -6,15 +6,72 @@
     <title>Add New Product</title>
     <style>
         /* Your existing CSS styles */
-        body { font-family: Arial, sans-serif; background-color: #f5f5f5; margin: 0; padding: 0; }
-        .container { width: 600px; margin: 50px auto; padding: 25px; background-color: white; border-radius: 5px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
-        h2 { color: #ff9900; text-align: center; font-weight: normal; margin-bottom: 20px; }
-        label { display: block; margin-bottom: 8px; font-weight: bold; color: #333; }
-        .form-control { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; box-sizing: border-box; }
-        .gridview { margin-top: 20px; background-color: #fff; border-collapse: collapse; width: 100%; text-align: left; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); }
-        .gridview th, .gridview td { padding: 12px 15px; border: 1px solid #ddd; }
-        .gridview th { background-color: #f8f8f8; font-weight: bold; }
-        #lblMessage { display: block; margin-top: 15px; text-align: center; font-weight: bold; color: green; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 600px;
+            margin: 50px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #ff9900;
+            text-align: center;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .gridview {
+            margin-top: 20px;
+            background-color: #fff;
+            border-collapse: collapse;
+            width: 100%;
+            text-align: left;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+            .gridview th, .gridview td {
+                padding: 12px 15px;
+                border: 1px solid #ddd;
+            }
+
+            .gridview th {
+                background-color: #f8f8f8;
+                font-weight: bold;
+            }
+
+        #lblMessage {
+            display: block;
+            margin-top: 15px;
+            text-align: center;
+            font-weight: bold;
+            color: green;
+        }
     </style>
 </head>
 <body>
@@ -45,7 +102,7 @@
             <asp:GridView ID="gvProducts" runat="server" AutoGenerateColumns="False" CssClass="gridview"
                 OnSelectedIndexChanged="gvProducts_SelectedIndexChanged" DataKeyNames="ProductID">
 
-               
+
 
                 <Columns>
                     <asp:BoundField DataField="ProductID" HeaderText="Product ID" ReadOnly="True" />
